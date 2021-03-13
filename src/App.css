@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans"),
+    url("./assets/fonts/OpenSans-Regular.ttf") format("truetype");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: "Open Sans Condensed";
+  src: local("Open Sans Condensed"),
+    url("./assets/fonts/OpenSansCondensed-Light.ttf") format("truetype");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: "Open Sans";
+  display: flex;
+  flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1 {
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-family: "Open Sans Condensed";
+  margin-top: 0;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+h3 {
+  font-family: "Open Sans Condensed";
+  font-weight: 400;
+}
+
+p {
+  font-family: "Open Sans Condensed";
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  max-height: 18.5rem;
+  width: auto;
+  margin: 1rem;
+  border-radius: 0.3rem;
+}
+
+.about-me {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.section {
+  border-bottom: 1px solid #000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.section-title {
+  font-family: "Open Sans";
+  font-size: 1.1rem;
+}
+
+.group {
+  margin-left: 1.2rem;
+}
+
+.organisation {
+  font-weight: 600;
+}
+
+.role {
+  margin-left: 1.3rem;
+}
+
+.description {
+  margin-left: 2.2rem;
+}
+
+.role > span {
+  font-family: "Open Sans";
+}
+
+.footer {
+  text-align: center;
+}
+
+a {
+  color: #1d354b;
+}
+
+a:visited,
+a:hover {
+  color: #1d354b96;
+}
+
+.title {
+  display: flex;
+}
+
+.title > * {
+  margin: 0.2rem;
+}
+
+.keywords {
+  display: flex;
+}
+
+.keywords span {
+  background-color: #afafaf;
+  color: #fff;
+  font-size: 0.7rem;
+  border-radius: 99999rem;
+  padding: 0.2rem 0.5rem;
+  margin-right: 0.2rem;
+  cursor: default;
 }
