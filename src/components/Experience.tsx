@@ -39,7 +39,7 @@ function Experience({
               <span>{role.timespan}</span>
               <span className="col-span-2">
                 <p>{role.name}</p>
-                <p className="text-gray-500">{role.description}</p>
+                <p className="text-gray-500 text-justify">{role.description}</p>
               </span>
             </div>
           </div>

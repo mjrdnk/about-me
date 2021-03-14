@@ -77,26 +77,26 @@ function App() {
                   className="h-6 w-auto"
                 />
               }
-              keywords={["React", "Typescript", "Nodejs", "Laravel"]}
+              keywords={["React", "Typescript", "Graphql", "Redux"]}
               roles={[
                 {
                   timespan: "11.2020-present",
                   name:
                     "Senior software developer (team lead) & interim product owner",
                   description:
-                    "Taken lead role over the product backlog and priorities in the remote product team of 6",
+                    "Taken lead role over the product backlog and priorities in the international remote product team of 6. Responsible for hiring inside and outside of the team. Collaborated with major stakeholders and brought the structured work to the team.",
                 },
                 {
                   timespan: "02.2020-11.2020",
                   name: "Senior software developer & scrum master",
                   description:
-                    "Taken lead role over agile process in the remote product team of 5",
+                    "Taken lead role over agile process in the international remote product team of 5. Helped implement agile methodologies and practices in the team: agile approach, feedback cycle, timeboxing. Worked on the features and bugs together with Junior and Mid level developers. Used mob and pair programming.",
                 },
                 {
                   timespan: "03.2019-02.2020",
-                  name: "Software developer",
+                  name: "Front-end engineer",
                   description:
-                    "Maintained and developed new features in popular point-of-sale platform for DACH countries",
+                    "Maintained and developed new features in popular point-of-sale platform for DACH countries. Was focusing on the Front-end, building new features into existing architecture and greenfield products. Constraints of the product: 99.99% availability due to the nature.",
                 },
               ]}
             />
@@ -125,7 +125,11 @@ function App() {
                       >
                         digital "presence manager" platform
                       </a>{" "}
-                      for the French market
+                      for the French market. Build a medium size with Angular,
+                      based on the reactive paradigms (rjxs), saving data and
+                      handling the global state with Redux. We have shared
+                      components with a mobile-hybrid app built with Ionic
+                      framework.
                     </>
                   ),
                 },
@@ -142,7 +146,7 @@ function App() {
               role={{
                 name: "Supporting junior devs",
                 description:
-                  "Helping beginners in tech to develop their skills by teaching coding and giving workshops",
+                  "Helping beginners in tech to develop their skills by teaching coding and giving workshops.",
               }}
               links={[]}
               logo={<span className="text-3xl">🤓</span>}
@@ -158,7 +162,7 @@ function App() {
               }}
               links={[
                 {
-                  label: "build your MVP hackathon",
+                  label: "build your MVP hackathon.",
                   href:
                     "https://twitter.com/mjrdnk/status/1181096519799365632?s=20",
                 },
@@ -178,7 +182,7 @@ function App() {
               role={{
                 name: "Co-founder / software developer",
                 description:
-                  "Together with friends worked on mobile app that helped users search for sport partners",
+                  "Together with friends worked on mobile app that helped users search for sport partners.",
               }}
               links={[]}
               logo={
@@ -195,12 +199,11 @@ function App() {
               keywords={["Frontend", "Trends"]}
               role={{
                 name: "Organizer / speaker",
-                description:
-                  "Gathered colleagues every month to share tech and general concepts",
+                description: "Gathered colleagues every month to share",
               }}
               links={[
                 {
-                  label: "meetup docs",
+                  label: "tech and general concepts.",
                   href: "https://yelsterdigital.github.io/monthly-meetup/",
                 },
               ]}
@@ -223,7 +226,7 @@ function App() {
               role={{
                 name: "",
                 description:
-                  "Typescript, React, Redux, Gatsby, Javascript, Nodejs, React Native, HTML, CSS, Responsive design",
+                  "Typescript, React, React-router, Redux, Gatsby, Javascript, Nodejs, React Native, HTML, CSS, Responsive design",
               }}
               links={[]}
               logo={<span className="text-3xl">🛠</span>}
@@ -259,7 +262,7 @@ function App() {
               role={{
                 name: "",
                 description:
-                  "Code organisation, Architecture, Git, Unix command line, Bash",
+                  "Git, Unix command line, Bash, Code organisation, Architecture, Code documentation",
               }}
               links={[]}
               logo={<span className="text-3xl">💻</span>}
