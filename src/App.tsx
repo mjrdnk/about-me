@@ -10,6 +10,7 @@ import Badge from "./components/Badge";
 import Experience from "./components/Experience";
 import Section from "./components/Section";
 import Tile from "./components/Tile";
+import TileSection from "./components/TileSection";
 
 function App() {
   return (
@@ -115,7 +116,7 @@ function App() {
                   name: "Web developer",
                   description: (
                     <>
-                      Worked in a small distributed team and helped developed{" "}
+                      Worked in a small distributed team and developed{" "}
                       <a
                         className="underline"
                         href="https://www.solocal.com/solocalmanager"
@@ -133,11 +134,8 @@ function App() {
           </>
         </Section>
 
-        <div className="my-12 max-w-2xl text-center">
-          <h3 className="font-display text-3xl mb-4 font-mono text-gray-500 font-medium">
-            Side projects
-          </h3>
-          <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
+        <TileSection title="Side projects">
+          <>
             <Tile
               organisationName="Mentoring"
               keywords={["React", "Nodejs"]}
@@ -214,8 +212,87 @@ function App() {
                 />
               }
             />
-          </div>
-        </div>
+          </>
+        </TileSection>
+
+        <TileSection title="Tools">
+          <>
+            <Tile
+              organisationName="Front-end"
+              keywords={[]}
+              role={{
+                name: "",
+                description:
+                  "Typescript, React, Redux, Gatsby, Javascript, Nodejs, React Native, HTML, CSS, Responsive design",
+              }}
+              links={[]}
+              logo={<span className="text-3xl">🛠</span>}
+            />
+
+            <Tile
+              organisationName="Backend"
+              keywords={[]}
+              role={{
+                name: "",
+                description:
+                  "Grahpql, APIs, REST, Nodejs, Firebase, PHP, Laravel, SQL",
+              }}
+              links={[]}
+              logo={<span className="text-3xl">🔌</span>}
+            />
+
+            <Tile
+              organisationName="Testing"
+              keywords={[]}
+              role={{
+                name: "",
+                description:
+                  "Unit, Integration and E2E tests. Jest, Testing-library/react, Cypress",
+              }}
+              links={[]}
+              logo={<span className="text-3xl">🧪</span>}
+            />
+
+            <Tile
+              organisationName="General"
+              keywords={[]}
+              role={{
+                name: "",
+                description:
+                  "Code organisation, Architecture, Git, Unix command line, Bash",
+              }}
+              links={[]}
+              logo={<span className="text-3xl">💻</span>}
+            />
+          </>
+        </TileSection>
+
+        <TileSection title="Additional">
+          <>
+            <Tile
+              organisationName="Languages"
+              keywords={[]}
+              role={{
+                name: "Curious communicator",
+                description:
+                  "I speak English, German and Polish fluently, communicate in Italian in 80% and know basic Greek and Spanish",
+              }}
+              links={[]}
+              logo={<span className="text-3xl">🌎</span>}
+            />
+            <Tile
+              organisationName="Hobbies"
+              keywords={[]}
+              role={{
+                name: "Outdoors / indoors",
+                description:
+                  "Water sports, music, camping, playing guitar, skiing",
+              }}
+              links={[]}
+              logo={<span className="text-3xl">🏄🏼‍♂️</span>}
+            />
+          </>
+        </TileSection>
 
         <Section title="Education">
           <>
