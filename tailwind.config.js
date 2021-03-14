@@ -13,6 +13,9 @@ module.exports = {
       borderRadius: {
         lg: "1.5rem",
       },
+      screens: {
+        tiny: "425px",
+      },
     },
   },
   variants: {

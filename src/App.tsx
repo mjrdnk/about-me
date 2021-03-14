@@ -213,18 +213,18 @@ function App() {
       </div>
 
       <div className="flex align-center flex-col text-center mb-12">
-        <h2 className="text-3xl mb-4 font-mono text-gray-500 font-medium">
+        <h2 className="text-xl tiny:text-3xl mb-4 font-mono text-gray-500 font-medium">
           Get in touch
         </h2>
         <a
-          className="text-3xl text-primary"
+          className="text-xl tiny:text-3xl text-primary"
           href="mailto:maciej.jordanek@gmail.com"
         >
           maciej.jordanek@gmail.com
         </a>
       </div>
 
-      <p className="mb-3 text-gray-500">
+      <p className="text-sm tiny:text-md mb-3 text-gray-500">
         Crafted with 💚 with react + tailwind
       </p>
     </div>
