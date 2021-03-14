@@ -1,233 +1,193 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
 import personalPhoto from "./assets/images/personal-photo.jpg";
+import Badge from "./components/Badge";
+import Experience from "./components/Experience";
+import Section from "./components/Section";
 
 function App() {
   return (
-    <>
-      <div className="header">
-        <div className="about-me">
-          <h1>Maciej Jordanek</h1>
-          <h2>lean development of digital products</h2>
-          <h3>
-            core competencies:
-            <ul>
-              <li>front end development</li>
-              <li>team work & communication</li>
-            </ul>
-          </h3>
-        </div>
+    <div className="bg-brightGray flex justify-center flex-col items-center">
+      <div className="flex justify-center flex-col items-center p-6">
+        <img
+          src={personalPhoto}
+          alt="personalPhoto"
+          className="w-52 rounded-lg shadow-md mb-6 mt-6"
+        />
+        <h1 className="font-display text-6xl tracking-tight font-extrabold text-gray-900 m-3">
+          Maciej Jordanek
+        </h1>
+        <h2 className="font-display text-3xl mb-4 font-mono text-gray-500 font-medium">
+          Lean development of digital products
+        </h2>
 
-        <img src={personalPhoto} alt="personalPhoto" />
-      </div>
-
-      <div className="section">
-        <p className="section-title">experience</p>
-
-        <div className="group">
-          <div className="title">
-            <a
-              className="organisation"
-              href="https://ready2order.com/de"
-              target="_blank"
-            >
-              ready2order GmbH
-            </a>
-
-            <div className="keywords">
-              <span>react</span>
-              <span>typescript</span>
-              <span>nodejs</span>
-              <span>laravel</span>
-              <span>php</span>
-              <span>mysql</span>
-              <span>CI/CD</span>
-              <span>gatsby</span>
-              <span>headless CMS</span>
-              <span>agile</span>
-              <span>product development</span>
-              <span>people</span>
-            </div>
-          </div>
-
-          <p className="role">
-            11.2020-present
-            <span>
-              senior software developer (team lead) & interim product owner
-            </span>
-          </p>
-          <p className="description">
-            taken lead role over the product backlog and priorities in the
-            remote product team of 6
-          </p>
-          <p className="role">
-            02.2020-11.2020{" "}
-            <span>senior software developer & scrum master</span>
-          </p>
-          <p className="description">
-            taken lead role over agile process in the remote product team of 5
-          </p>
-
-          <p className="role">
-            03.2019-02.2020 <span>software developer</span>
-          </p>
-          <p className="description">
-            maintained and developed new features in popular point-of-sale
-            platform for DACH countries
-          </p>
-        </div>
-
-        <div className="group">
-          <div className="title">
-            <a
-              className="organisation"
-              href="https://www.yelsterdigital.com/"
-              target="_blank"
-            >
-              yelster digital GmbH
-            </a>
-
-            <div className="keywords">
-              <span>angular</span>
-              <span>typescript</span>
-              <span>redux</span>
-              <span>rxjs (ngrx)</span>
-              <span>nodejs</span>
-              <span>CI/CD</span>
-              <span>unix</span>
-            </div>
-          </div>
-          <p className="role">
-            07.2016-03.2019 <span>web developer</span>
-          </p>
-          <p className="description">
-            worked in a small distributed team and helped developed
-            <a href="https://www.solocal.com/solocalmanager" target="_blank">
-              digital "presence manager" platform
-            </a>
-            for the French market
-          </p>
+        <div className="flex">
+          <Badge primary text="Front-end" />
+          <Badge primary text="SaaS" />
+          <Badge primary text="Agile" />
         </div>
       </div>
 
-      <div className="section">
-        <p className="section-title">volounteering</p>
+      <div className="py-4">
+        <Section title="Experience">
+          <>
+            <Experience
+              organisationName="ready2order GmbH"
+              keywords={["React", "Typescript", "Nodejs", "Laravel"]}
+              roles={[
+                {
+                  timespan: "11.2020-present",
+                  name:
+                    "Senior software developer (team lead) & interim product owner",
+                  description:
+                    "Taken lead role over the product backlog and priorities in the remote product team of 6",
+                },
+                {
+                  timespan: "02.2020-11.2020",
+                  name: "Senior software developer & scrum master",
+                  description:
+                    "Taken lead role over agile process in the remote product team of 5",
+                },
+                {
+                  timespan: "03.2019-02.2020",
+                  name: "Software developer",
+                  description:
+                    "Maintained and developed new features in popular point-of-sale platform for DACH countries",
+                },
+              ]}
+            />
+            <Experience
+              organisationName="yelster digital GmbH"
+              keywords={["Angular", "Typescript", "Redux", "Rxjs (ngrx)"]}
+              roles={[
+                {
+                  timespan: "07.2016-03.2019",
+                  name: "Web developer",
+                  description: (
+                    <>
+                      Worked in a small distributed team and helped developed{" "}
+                      <a
+                        className="underline"
+                        href="https://www.solocal.com/solocalmanager"
+                        target="_blank"
+                      >
+                        digital "presence manager" platform
+                      </a>{" "}
+                      for the French market
+                    </>
+                  ),
+                },
+              ]}
+            />
+          </>
+        </Section>
 
-        <div className="group">
-          <div className="title">
-            <span className="organisation">private</span>
+        <Section title="Volounteering">
+          <>
+            <Experience
+              organisationName="Private"
+              keywords={["React", "Nodejs"]}
+              roles={[
+                {
+                  timespan: "2019-present",
+                  name: "Mentor",
+                  description:
+                    "Helping juniors and beginners in tech to develop their skills by teaching",
+                },
+              ]}
+            />
 
-            <div className="keywords">
-              <span>react</span>
-              <span>nodejs</span>
-            </div>
-          </div>
-          <p className="role">
-            2019-present <span>mentor</span>
-          </p>
-          <p className="description">
-            helping juniors and beginners in tech to develop their skills by
-            teaching
-          </p>
+            <Experience
+              organisationName="Tindogs"
+              keywords={["Nodejs", "Laravel"]}
+              roles={[
+                {
+                  timespan: "2019",
+                  name: "Software developer",
+                  description:
+                    "Together with friends developed a prototype app 'tinder for dogs' and took the podium on the hackathon",
+                },
+              ]}
+            />
 
-          <div className="title">
-            <span className="organisation">tindogs</span>
+            <Experience
+              organisationName="Game on"
+              keywords={["React native", "Firebase"]}
+              roles={[
+                {
+                  name: "Co-founder / software developer",
+                  timespan: "2017-2018",
+                  description:
+                    "Together with friends worked on mobile app that searched for sport partners",
+                },
+              ]}
+            />
 
-            <div className="keywords">
-              <span>nodejs</span>
-              <span>laravel</span>
-            </div>
-          </div>
-          <p className="role">
-            2019 <span>software developer</span>
-          </p>
-          <p className="description">
-            together with friends developed a prototype app "tinder for dogs"
-            and took the podium on the hackathon
-          </p>
+            <Experience
+              organisationName="yelster digital meetup"
+              keywords={["Frontend", "Trends"]}
+              roles={[
+                {
+                  name: "Organizer",
+                  timespan: "2017-2019",
+                  description:
+                    "Gathered colleagues every month to share tech and general concepts",
+                },
+              ]}
+            />
+          </>
+        </Section>
 
-          <div className="title">
-            <span className="organisation">game on</span>
+        <Section title="Education">
+          <>
+            <Experience
+              organisationName="Wroclaw University of Science and Technology, Poland"
+              keywords={[]}
+              roles={[
+                {
+                  name: "No degree (parallel to master)",
+                  timespan: "2015-2016",
+                  description: "Computer Science",
+                },
+                {
+                  name: "Master's degree",
+                  timespan: "2014-2016",
+                  description: "Entrepreneurship, Innovation & Projects",
+                },
+                {
+                  name: "Bachelor's degree",
+                  timespan: "2011-2014",
+                  description: "Organisational Management",
+                },
+              ]}
+            />
 
-            <div className="keywords">
-              <span>react native</span>
-              <span>firebase</span>
-            </div>
-          </div>
-
-          <p className="role">
-            2017-2018 <span>co-founder / software developer</span>
-          </p>
-          <p className="description">
-            together with friends worked on mobile app that searched for sport
-            partners
-          </p>
-
-          <a
-            className="organisation"
-            href="https://github.com/yelsterdigital/monthly-meetup"
-            target="_blank"
-          >
-            yelster digital meetup
-          </a>
-          <p className="role">
-            2017-2019 <span>organizer</span>
-          </p>
-          <p className="description">
-            gathered colleagues every month to share tech and general concepts
-          </p>
-        </div>
+            <Experience
+              organisationName="The University of Palermo, Italy"
+              keywords={[]}
+              roles={[
+                {
+                  name: "erasmus",
+                  timespan: "2014-2015",
+                  description: "Engineering Management",
+                },
+              ]}
+            />
+          </>
+        </Section>
       </div>
 
-      <div className="section">
-        <p className="section-title">education</p>
-
-        <div className="group">
-          <a
-            className="organisation"
-            href="http://pwr.edu.pl/en/"
-            target="_blank"
-          >
-            Wroclaw University of Science and Technology, Poland
-          </a>
-          <p className="role">
-            2015-2016 <span>no degree (parallel to master)</span>
-          </p>
-          <p className="description">Computer Science</p>
-
-          <p className="role">
-            2014-2016 <span>master degree</span>
-          </p>
-          <p className="description">Entrepreneurship, Innovation & Projects</p>
-
-          <p className="role">
-            2011-2014 <span>bachelor degree</span>
-          </p>
-          <p className="description">Organisational Management</p>
-
-          <a
-            className="organisation"
-            href="https://www.unipa.it/"
-            target="_blank"
-          >
-            The University of Palermo, Italy
-          </a>
-          <p className="role">
-            2014-2015 <span>erasmus</span>
-          </p>
-          <p className="description">Engineering Management</p>
-        </div>
+      <div className="flex align-center flex-col text-center mb-12">
+        <h2 className="font-display text-3xl mb-4 font-mono text-gray-500 font-medium">
+          Get in touch
+        </h2>
+        <a
+          className="text-3xl text-primary"
+          href="mailto:maciej.jordanek@gmail.com"
+        >
+          maciej.jordanek@gmail.com
+        </a>
       </div>
-
-      <a className="footer" href="mailto:maciej.jordanek@gmail.com">
-        maciej.jordanek@gmail.com
-      </a>
-
-      <a className="footer" href="https://twitter.com/mjrdnk" target="_blank">
-        my twitter
-      </a>
-    </>
+    </div>
   );
 }
 
