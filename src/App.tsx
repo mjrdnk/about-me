@@ -13,11 +13,24 @@ function App() {
   return (
     <div className="bg-brightGray flex justify-center flex-col items-center font-display">
       <div className="flex justify-center flex-col items-center p-6 text-center">
-        <img
-          src={personalPhoto}
-          alt="personalPhoto"
-          className="w-52 rounded-lg shadow-md mb-6 mt-6"
-        />
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 mt-6">
+          <img
+            src={personalPhoto}
+            alt="personalPhoto"
+            className="w-52 h-auto rounded-lg shadow-md"
+          />
+          <div className="h-52 text-gray-500 p-6 rounded-lg flex flex-col justify-center shadow-md bg-white">
+            <a href="mailto:maciej.jordanek@gmail.com" className="underline">
+              <p>maciej.jordanek</p>
+              <p>@gmail.com</p>
+            </a>
+            <a href="tel:+436804007708" className="underline">
+              (+43) 680 400 77 08
+            </a>
+            <p>Vogtgasse 309/16</p>
+            <p>1140, Wien Austria</p>
+          </div>
+        </div>
         <h1 className="text-6xl tracking-tight font-extrabold text-gray-900 m-3">
           Maciej Jordanek
         </h1>
@@ -223,7 +236,7 @@ function App() {
           Get in touch
         </h2>
         <a
-          className="text-xl tiny:text-3xl text-primary"
+          className="text-xl tiny:text-3xl text-primary underline"
           href="mailto:maciej.jordanek@gmail.com"
         >
           maciej.jordanek@gmail.com
