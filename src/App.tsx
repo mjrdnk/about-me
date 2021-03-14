@@ -6,17 +6,17 @@ import Section from "./components/Section";
 
 function App() {
   return (
-    <div className="bg-brightGray flex justify-center flex-col items-center">
-      <div className="flex justify-center flex-col items-center p-6">
+    <div className="bg-brightGray flex justify-center flex-col items-center font-display">
+      <div className="flex justify-center flex-col items-center p-6 text-center">
         <img
           src={personalPhoto}
           alt="personalPhoto"
           className="w-52 rounded-lg shadow-md mb-6 mt-6"
         />
-        <h1 className="font-display text-6xl tracking-tight font-extrabold text-gray-900 m-3">
+        <h1 className="text-6xl tracking-tight font-extrabold text-gray-900 m-3">
           Maciej Jordanek
         </h1>
-        <h2 className="font-display text-3xl mb-4 font-mono text-gray-500 font-medium">
+        <h2 className="text-3xl mb-4 font-mono text-gray-500 font-medium">
           Lean development of digital products
         </h2>
 
@@ -177,7 +177,7 @@ function App() {
       </div>
 
       <div className="flex align-center flex-col text-center mb-12">
-        <h2 className="font-display text-3xl mb-4 font-mono text-gray-500 font-medium">
+        <h2 className="text-3xl mb-4 font-mono text-gray-500 font-medium">
           Get in touch
         </h2>
         <a
@@ -187,6 +187,10 @@ function App() {
           maciej.jordanek@gmail.com
         </a>
       </div>
+
+      <p className="mb-3 text-gray-500">
+        Crafted with 💚 with react + tailwind
+      </p>
     </div>
   );
 }
