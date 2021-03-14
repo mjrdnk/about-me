@@ -112,7 +112,7 @@ function App() {
               role={{
                 name: "Supporting junior devs",
                 description:
-                  "Helping beginners in tech to develop their skills by teaching",
+                  "Helping beginners in tech to develop their skills by teaching coding and giving workshops",
               }}
               links={[]}
               logo={<span className="text-3xl">🤓</span>}
@@ -124,9 +124,15 @@ function App() {
               role={{
                 name: "Software developer",
                 description:
-                  "Together with friends developed a prototype app 'tinder for dogs' and took the podium on the hackathon",
+                  "Together with friends developed a prototype app for dog shelters and took podium in",
               }}
-              links={[]}
+              links={[
+                {
+                  label: "build your MVP hackathon",
+                  href:
+                    "https://twitter.com/mjrdnk/status/1181096519799365632?s=20",
+                },
+              ]}
               logo={
                 <img
                   src={tindogsLogo}
@@ -142,7 +148,7 @@ function App() {
               role={{
                 name: "Co-founder / software developer",
                 description:
-                  "Together with friends worked on mobile app that searched for sport partners",
+                  "Together with friends worked on mobile app that helped users search for sport partners",
               }}
               links={[]}
               logo={
@@ -158,7 +164,7 @@ function App() {
               organisationName="yelster digital meetup"
               keywords={["Frontend", "Trends"]}
               role={{
-                name: "Organizer",
+                name: "Organizer / speaker",
                 description:
                   "Gathered colleagues every month to share tech and general concepts",
               }}
@@ -225,7 +231,15 @@ function App() {
       </div>
 
       <p className="text-sm tiny:text-md mb-3 text-gray-500">
-        Crafted with 💚 with react + tailwind
+        Crafted with 💚 with{" "}
+        <a
+          href="https://github.com/mjrdnk/about-me"
+          target="_blank"
+          rel="noreferrer"
+          className="underline"
+        >
+          react + tailwind
+        </a>
       </p>
     </div>
   );
