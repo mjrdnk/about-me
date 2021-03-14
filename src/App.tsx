@@ -4,6 +4,8 @@ import tindogsLogo from "./assets/images/tindogs.png";
 import yelsterLogo from "./assets/images/yelster.svg";
 import ready2orderLogo from "./assets/images/ready2order.png";
 import gameonLogo from "./assets/images/gameon.jpeg";
+import githubLogo from "./assets/images/github.png";
+import linkedinLogo from "./assets/images/linkedin.png";
 import Badge from "./components/Badge";
 import Experience from "./components/Experience";
 import Section from "./components/Section";
@@ -13,24 +15,12 @@ function App() {
   return (
     <div className="bg-brightGray flex justify-center flex-col items-center font-display">
       <div className="flex justify-center flex-col items-center p-6 text-center">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 mt-6">
-          <img
-            src={personalPhoto}
-            alt="personalPhoto"
-            className="w-52 h-auto rounded-lg shadow-md"
-          />
-          <div className="h-52 text-gray-500 p-6 rounded-lg flex flex-col justify-center shadow-md bg-white">
-            <a href="mailto:maciej.jordanek@gmail.com" className="underline">
-              <p>maciej.jordanek</p>
-              <p>@gmail.com</p>
-            </a>
-            <a href="tel:+436804007708" className="underline">
-              (+43) 680 400 77 08
-            </a>
-            <p>Vogtgasse 309/16</p>
-            <p>1140, Wien Austria</p>
-          </div>
-        </div>
+        <img
+          src={personalPhoto}
+          alt="personalPhoto"
+          className="w-60 h-auto rounded-lg shadow-md  mb-6 mt-6"
+        />
+
         <h1 className="text-6xl tracking-tight font-extrabold text-gray-900 m-3">
           Maciej Jordanek
         </h1>
@@ -42,6 +32,35 @@ function App() {
           <Badge primary text="Front-end" />
           <Badge primary text="SaaS" />
           <Badge primary text="Agile" />
+        </div>
+
+        <div className="p-4 tiny:p-8 sm:p-12 my-6 max-w-2xl bg-white rounded-lg shadow-sm">
+          <a
+            href="mailto:maciej.jordanek@gmail.com"
+            className="underline block"
+          >
+            maciej.jordanek@gmail.com
+          </a>
+          <a href="tel:+436804007708" className="underline block">
+            (+43) 680 400 77 08
+          </a>
+          <p>based in Vienna, Austria</p>
+
+          <div className="flex justify-center space-x-2 mt-2">
+            <a href="https://github.com/mjrdnk" target="_blank">
+              <img src={githubLogo} alt="github logo" className="w-8 h-auto" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/maciej-jordanek/"
+              target="_blank"
+            >
+              <img
+                src={linkedinLogo}
+                alt="linkedin logo"
+                className="w-8 h-auto"
+              />
+            </a>
+          </div>
         </div>
       </div>
 
