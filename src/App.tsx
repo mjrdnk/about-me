@@ -96,7 +96,7 @@ function App() {
                   timespan: "03.2019-02.2020",
                   name: "Front-end engineer",
                   description:
-                    "Maintained and developed new features in popular point-of-sale platform for DACH countries. Was focusing on the Front-end, building new features into existing architecture and greenfield products. Constraints of the product: 99.99% availability due to the nature.",
+                    "Maintained and developed new features in popular point-of-sale platform for DACH countries. Was focusing on the Front-end, building new features into existing architecture and greenfield products. Constraints of the product: 99.99% availability and quality due to its nature, mobile first, hardware compatibility.",
                 },
               ]}
             />
@@ -125,7 +125,7 @@ function App() {
                       >
                         digital "presence manager" platform
                       </a>{" "}
-                      for the French market. Build a medium size with Angular,
+                      for the French market. Built a medium size with Angular,
                       based on the reactive paradigms (rjxs), saving data and
                       handling the global state with Redux. We have shared
                       components with a mobile-hybrid app built with Ionic
