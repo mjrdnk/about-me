@@ -4,13 +4,12 @@ import tindogsLogo from "./assets/images/tindogs.png";
 import yelsterLogo from "./assets/images/yelster.svg";
 import ready2orderLogo from "./assets/images/ready2order.png";
 import gameonLogo from "./assets/images/gameon.jpeg";
-import githubLogo from "./assets/images/github.png";
-import linkedinLogo from "./assets/images/linkedin.png";
 import Badge from "./components/Badge";
 import Experience from "./components/Experience";
 import Section from "./components/Section";
 import Tile from "./components/Tile";
 import TileSection from "./components/TileSection";
+import SocialIcons from "./components/SocialIcons";
 
 function App() {
   return (
@@ -31,37 +30,24 @@ function App() {
 
         <div className="flex">
           <Badge primary text="Front-end" />
-          <Badge primary text="SaaS" />
           <Badge primary text="Agile" />
+          <Badge primary text="Remote" />
         </div>
 
-        <div className="p-4 tiny:p-8 sm:p-12 my-6 max-w-2xl bg-white rounded-lg shadow-sm">
+        <div className="p-4 sm:p-8 max-w-2xl flex flex-col md:flex-row text-gray-500 text-sm items-center">
           <a
             href="mailto:maciej.jordanek@gmail.com"
             className="underline block"
           >
             maciej.jordanek@gmail.com
           </a>
+          <span className="hidden md:inline-block">&nbsp;|&nbsp;</span>
           <a href="tel:+436804007708" className="underline block">
             (+43) 680 400 77 08
           </a>
-          <p>based in Vienna, Austria</p>
-
-          <div className="flex justify-center space-x-2 mt-2">
-            <a href="https://github.com/mjrdnk" target="_blank">
-              <img src={githubLogo} alt="github logo" className="w-8 h-auto" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/maciej-jordanek/"
-              target="_blank"
-            >
-              <img
-                src={linkedinLogo}
-                alt="linkedin logo"
-                className="w-8 h-auto"
-              />
-            </a>
-          </div>
+          <span className="hidden md:inline-block">&nbsp;|&nbsp;</span>
+          <span>based in Vienna, Austria</span>
+          <SocialIcons />
         </div>
       </div>
 
@@ -339,6 +325,9 @@ function App() {
         >
           maciej.jordanek@gmail.com
         </a>
+        <div className="mt-8">
+          <SocialIcons />
+        </div>
       </div>
 
       <p className="text-sm tiny:text-md mb-3 text-gray-500">
