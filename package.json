@@ -19,9 +19,11 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "craco build && mkdir -p ./docs && cp -r ./build/* ./docs/",
+    "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -b gh-page -d build"
   },
   "eslintConfig": {
     "extends": [
