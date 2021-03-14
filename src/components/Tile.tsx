@@ -17,7 +17,7 @@ type TileProps = {
 
 function Tile({ organisationName, keywords, role, links, logo }: TileProps) {
   return (
-    <div className="bg-white rounded-lg shadow-sm p-12 text-center flex flex-col">
+    <div className="bg-white rounded-lg shadow-sm p-4 sm:8 md:p-12 text-center flex flex-col">
       <div className="flex items-center justify-center h-12">
         {logo}
         <h4 className="ml-2 text-2xl font-mono text-gray-900 font-medium">

@@ -20,7 +20,7 @@ function Experience({
 }: ExperienceProps) {
   return (
     <div className="mb-12">
-      <div className="flex items-center mb-4">
+      <div className="flex items-center flex-col sm:flex-row mb-4">
         <h4 className="text-2xl font-mono text-gray-900 font-medium mr-2">
           {organisationName}
         </h4>
