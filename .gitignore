@@ -8,8 +8,8 @@
 # testing
 /coverage
 
-# production
-/build
+# production - changed - because deploying from build folder
+# /build
 
 # misc
 .DS_Store
