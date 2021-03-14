@@ -1,8 +1,13 @@
 import React from "react";
 import personalPhoto from "./assets/images/personal-photo.jpg";
+import tindogsLogo from "./assets/images/tindogs.png";
+import yelsterLogo from "./assets/images/yelster.svg";
+import ready2orderLogo from "./assets/images/ready2order.png";
+import gameonLogo from "./assets/images/gameon.jpeg";
 import Badge from "./components/Badge";
 import Experience from "./components/Experience";
 import Section from "./components/Section";
+import Tile from "./components/Tile";
 
 function App() {
   return (
@@ -32,6 +37,13 @@ function App() {
           <>
             <Experience
               organisationName="ready2order GmbH"
+              logo={
+                <img
+                  src={ready2orderLogo}
+                  alt="ready2order logo"
+                  className="h-6 w-auto"
+                />
+              }
               keywords={["React", "Typescript", "Nodejs", "Laravel"]}
               roles={[
                 {
@@ -57,6 +69,13 @@ function App() {
             />
             <Experience
               organisationName="yelster digital GmbH"
+              logo={
+                <img
+                  src={yelsterLogo}
+                  alt="yelster digital logo"
+                  className="h-12 w-auto"
+                />
+              }
               keywords={["Angular", "Typescript", "Redux", "Rxjs (ngrx)"]}
               roles={[
                 {
@@ -69,6 +88,7 @@ function App() {
                         className="underline"
                         href="https://www.solocal.com/solocalmanager"
                         target="_blank"
+                        rel="noreferrer"
                       >
                         digital "presence manager" platform
                       </a>{" "}
@@ -81,61 +101,83 @@ function App() {
           </>
         </Section>
 
-        <Section title="Volounteering">
-          <>
-            <Experience
-              organisationName="Private"
+        <div className="my-12 max-w-2xl text-center">
+          <h3 className="font-display text-3xl mb-4 font-mono text-gray-500 font-medium">
+            Side projects
+          </h3>
+          <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
+            <Tile
+              organisationName="Mentoring"
               keywords={["React", "Nodejs"]}
-              roles={[
-                {
-                  timespan: "2019-present",
-                  name: "Mentor",
-                  description:
-                    "Helping juniors and beginners in tech to develop their skills by teaching",
-                },
-              ]}
+              role={{
+                name: "Supporting junior devs",
+                description:
+                  "Helping beginners in tech to develop their skills by teaching",
+              }}
+              links={[]}
+              logo={<span className="text-3xl">🤓</span>}
             />
 
-            <Experience
+            <Tile
               organisationName="Tindogs"
               keywords={["Nodejs", "Laravel"]}
-              roles={[
-                {
-                  timespan: "2019",
-                  name: "Software developer",
-                  description:
-                    "Together with friends developed a prototype app 'tinder for dogs' and took the podium on the hackathon",
-                },
-              ]}
+              role={{
+                name: "Software developer",
+                description:
+                  "Together with friends developed a prototype app 'tinder for dogs' and took the podium on the hackathon",
+              }}
+              links={[]}
+              logo={
+                <img
+                  src={tindogsLogo}
+                  alt="Tindogs logo"
+                  className="h-12 w-auto"
+                />
+              }
             />
 
-            <Experience
+            <Tile
               organisationName="Game on"
               keywords={["React native", "Firebase"]}
-              roles={[
-                {
-                  name: "Co-founder / software developer",
-                  timespan: "2017-2018",
-                  description:
-                    "Together with friends worked on mobile app that searched for sport partners",
-                },
-              ]}
+              role={{
+                name: "Co-founder / software developer",
+                description:
+                  "Together with friends worked on mobile app that searched for sport partners",
+              }}
+              links={[]}
+              logo={
+                <img
+                  src={gameonLogo}
+                  alt="gameon logo"
+                  className="h-12 w-auto"
+                />
+              }
             />
 
-            <Experience
+            <Tile
               organisationName="yelster digital meetup"
               keywords={["Frontend", "Trends"]}
-              roles={[
+              role={{
+                name: "Organizer",
+                description:
+                  "Gathered colleagues every month to share tech and general concepts",
+              }}
+              links={[
                 {
-                  name: "Organizer",
-                  timespan: "2017-2019",
-                  description:
-                    "Gathered colleagues every month to share tech and general concepts",
+                  label: "meetup docs",
+                  href: "https://yelsterdigital.github.io/monthly-meetup/",
                 },
               ]}
+              logo={
+                <img
+                  src={yelsterLogo}
+                  alt="yelster digital logo"
+                  className="h-12 w-auto"
+                />
+              }
             />
-          </>
-        </Section>
+          </div>
+        </div>
 
         <Section title="Education">
           <>
@@ -144,7 +186,7 @@ function App() {
               keywords={[]}
               roles={[
                 {
-                  name: "No degree (parallel to master)",
+                  name: "- (parallel to master)",
                   timespan: "2015-2016",
                   description: "Computer Science",
                 },
@@ -154,21 +196,15 @@ function App() {
                   description: "Entrepreneurship, Innovation & Projects",
                 },
                 {
+                  name: "Erasmus",
+                  timespan: "2014-2015",
+                  description:
+                    "Engineering Management, The University of Palermo, Italy",
+                },
+                {
                   name: "Bachelor's degree",
                   timespan: "2011-2014",
                   description: "Organisational Management",
-                },
-              ]}
-            />
-
-            <Experience
-              organisationName="The University of Palermo, Italy"
-              keywords={[]}
-              roles={[
-                {
-                  name: "erasmus",
-                  timespan: "2014-2015",
-                  description: "Engineering Management",
                 },
               ]}
             />

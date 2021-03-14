@@ -1,23 +1,37 @@
 import React, { ReactElement } from "react";
-import Keywords from "./Keywords";
+import Badge from "./Badge";
 
 type ExperienceProps = {
   keywords: string[];
   organisationName: string;
   roles: Array<{
-    timespan: string;
+    timespan: string | null;
     name: string;
     description: string | ReactElement;
   }>;
+  logo?: ReactElement;
 };
 
-function Experience({ organisationName, keywords, roles }: ExperienceProps) {
+function Experience({
+  organisationName,
+  keywords,
+  roles,
+  logo,
+}: ExperienceProps) {
   return (
     <div className="mb-12">
-      <h4 className="font-display text-2xl mb-4 font-mono text-gray-900 font-medium">
-        {organisationName}
-      </h4>
-      <Keywords keywords={keywords} />
+      <div className="flex items-center mb-4">
+        <h4 className="text-2xl font-mono text-gray-900 font-medium mr-2">
+          {organisationName}
+        </h4>
+        {logo}
+      </div>
+      <div className="flex">
+        {keywords.map((keyword, index) => {
+          // index is fine as key here because there is be no DOM modifications
+          return <Badge key={index} text={keyword} />;
+        })}
+      </div>
       {roles.map((role, index) => {
         return (
           <div key={index} className="my-6">
