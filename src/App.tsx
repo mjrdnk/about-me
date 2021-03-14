@@ -270,6 +270,37 @@ function App() {
           </>
         </TileSection>
 
+        <Section title="Education">
+          <>
+            <Experience
+              organisationName="Wroclaw University of Science and Technology, Poland"
+              keywords={[]}
+              roles={[
+                {
+                  name: "Bachelor's program",
+                  timespan: "2015-2016",
+                  description: "Computer Science",
+                },
+                {
+                  name: "Master's degree",
+                  timespan: "2014-2016",
+                  description: (
+                    <>
+                      <p>Entrepreneurship, Innovation & Projects</p>
+                      <p>(1 year abroad: Managerial Engineering, Italy)</p>
+                    </>
+                  ),
+                },
+                {
+                  name: "Bachelor's degree",
+                  timespan: "2011-2014",
+                  description: "Organisational Management",
+                },
+              ]}
+            />
+          </>
+        </Section>
+
         <TileSection title="Additional">
           <>
             <Tile
@@ -278,7 +309,7 @@ function App() {
               role={{
                 name: "Curious communicator",
                 description:
-                  "I speak English, German and Polish fluently, communicate in Italian in 80% and know basic Greek and Spanish",
+                  "I speak English, German and Polish fluently, communicate 80% in Italian and know basic Greek and Spanish.",
               }}
               links={[]}
               logo={<span className="text-3xl">🌎</span>}
@@ -296,38 +327,6 @@ function App() {
             />
           </>
         </TileSection>
-
-        <Section title="Education">
-          <>
-            <Experience
-              organisationName="Wroclaw University of Science and Technology, Poland"
-              keywords={[]}
-              roles={[
-                {
-                  name: "- (parallel to master)",
-                  timespan: "2015-2016",
-                  description: "Computer Science",
-                },
-                {
-                  name: "Master's degree",
-                  timespan: "2014-2016",
-                  description: "Entrepreneurship, Innovation & Projects",
-                },
-                {
-                  name: "Erasmus",
-                  timespan: "2014-2015",
-                  description:
-                    "Engineering Management, The University of Palermo, Italy",
-                },
-                {
-                  name: "Bachelor's degree",
-                  timespan: "2011-2014",
-                  description: "Organisational Management",
-                },
-              ]}
-            />
-          </>
-        </Section>
       </div>
 
       <div className="flex align-center flex-col text-center mb-12">
